@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Hamika Akter Rupa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { bg: '#0b0f17', card: '#111620', border: '#1f2937' },
+                        neon: { cyan: '#06b6d4', purple: '#a855f7', green: '#22c55e' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    boxShadow: { 'glass': '0 4px 30px rgba(0, 0, 0, 0.1)' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 shadow-lg" id="navbar">
+        <div class="glass-panel border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <a href="index.html" class="font-mono font-bold text-xl tracking-tighter text-neon-cyan hover:text-white transition-colors">
+                        &lt;RUPA/&gt;
+                    </a>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="index.html#home" class="hover:text-neon-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="index.html#about" class="hover:text-neon-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="projects.html" class="hover:text-neon-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                            <a href="certifications.html" class="hover:text-neon-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">Certifications</a>
+                            <a href="index.html#contact" class="px-4 py-2 border border-neon-cyan text-neon-cyan rounded hover:bg-neon-cyan hover:text-black transition-all text-sm font-medium shadow-neon-cyan">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">My Projects</h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+            Academic and personal development projects showcasing programming and database skills.
+        </p>
+    </section>
+
+    <section class="pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="glass-panel rounded-xl overflow-hidden border border-gray-800 group hover:border-neon-green transition-all duration-300 hover:-translate-y-2">
+                <div class="h-48 bg-gray-800 relative flex items-center justify-center">
+                    <i data-lucide="map-pin" class="w-12 h-12 text-gray-600"></i>
+                    <div class="absolute top-2 right-2 flex gap-1">
+                        <span class="text-[10px] bg-black/70 text-neon-green px-2 py-1 rounded backdrop-blur-md">Java OOP</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon-green transition-colors">Tour Management System</h3>
+                    <p class="text-gray-400 text-sm mb-4">Developed using Java with Object-Oriented Programming concepts.</p>
+                    <div class="flex gap-2">
+                        <button onclick="openModal('modal-tour')" class="flex-1 py-2 text-sm bg-gray-800 text-white rounded hover:bg-neon-green hover:text-black transition-colors">
+                            View Details
+                        </button>
+                        <a href="https://github.com/hamikarupa/TourManagement" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors border border-gray-700">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-xl overflow-hidden border border-gray-800 group hover:border-neon-cyan transition-all duration-300 hover:-translate-y-2">
+                <div class="h-48 bg-gray-800 relative flex items-center justify-center">
+                    <i data-lucide="calendar" class="w-12 h-12 text-gray-600"></i>
+                    <div class="absolute top-2 right-2 flex gap-1">
+                        <span class="text-[10px] bg-black/70 text-neon-cyan px-2 py-1 rounded backdrop-blur-md">SQL</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">Event Management System</h3>
+                    <p class="text-gray-400 text-sm mb-4">Designed and implemented using ER Diagram, SQL, Tables, and Queries.</p>
+                    <div class="flex gap-2">
+                        <button onclick="openModal('modal-event')" class="flex-1 py-2 text-sm bg-gray-800 text-white rounded hover:bg-neon-cyan hover:text-black transition-colors">
+                            View Details
+                        </button>
+                        <a href="https://github.com/hamikarupa/EventManagement" target="_blank" class="flex items-center justify-center px-3 py-2 text-sm bg-gray-800 text-white rounded hover:bg-gray-700 transition-colors border border-gray-700">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="modal-tour" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity backdrop-blur-sm" onclick="closeModal('modal-tour')"></div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-lg bg-[#111620] border border-gray-700 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                <div class="bg-[#0b0f17] px-4 py-3 sm:px-6 flex justify-between items-center border-b border-gray-800">
+                    <h3 class="text-lg font-bold leading-6 text-white">Tour Management System</h3>
+                    <button onclick="closeModal('modal-tour')" class="text-gray-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+                </div>
+                <div class="px-4 py-5 sm:p-6 text-gray-300 space-y-4">
+                    <div class="w-full h-48 bg-gray-800 rounded mb-4 border border-gray-700 flex items-center justify-center">
+                        <i data-lucide="map-pin" class="w-16 h-16 text-gray-600"></i>
+                    </div>
+                    <h4 class="text-neon-green font-bold text-sm uppercase">Project Overview</h4>
+                    <p class="text-sm">A comprehensive tour management system developed using Java with Object-Oriented Programming concepts. This project showcases advanced OOP design patterns and real-world application development.</p>
+                    <h4 class="text-neon-green font-bold text-sm uppercase">Key Features</h4>
+                    <ul class="text-sm list-disc list-inside space-y-1 text-gray-400">
+                        <li>Tour package management</li>
+                        <li>Customer booking system</li>
+                        <li>Itinerary planning</li>
+                        <li>Payment and billing management</li>
+                    </ul>
+                    <h4 class="text-neon-green font-bold text-sm uppercase">Tech Stack</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">Java</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">OOP</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">Design Patterns</span>
+                    </div>
+                </div>
+                <div class="bg-[#0b0f17] px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-gray-800">
+                    <button type="button" class="inline-flex w-full justify-center rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 sm:w-auto" onclick="closeModal('modal-tour')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-event" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-black bg-opacity-80 transition-opacity backdrop-blur-sm" onclick="closeModal('modal-event')"></div>
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div class="relative transform overflow-hidden rounded-lg bg-[#111620] border border-gray-700 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                <div class="bg-[#0b0f17] px-4 py-3 sm:px-6 flex justify-between items-center border-b border-gray-800">
+                    <h3 class="text-lg font-bold leading-6 text-white">Event Management System</h3>
+                    <button onclick="closeModal('modal-event')" class="text-gray-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+                </div>
+                <div class="px-4 py-5 sm:p-6 text-gray-300 space-y-4">
+                    <div class="w-full h-48 bg-gray-800 rounded mb-4 border border-gray-700 flex items-center justify-center">
+                        <i data-lucide="calendar" class="w-16 h-16 text-gray-600"></i>
+                    </div>
+                    <h4 class="text-neon-cyan font-bold text-sm uppercase">Project Overview</h4>
+                    <p class="text-sm">A database-driven event management system designed and implemented using ER Diagram, SQL, Tables, and Queries. This project demonstrates strong database design and SQL programming skills.</p>
+                    <h4 class="text-neon-cyan font-bold text-sm uppercase">Key Features</h4>
+                    <ul class="text-sm list-disc list-inside space-y-1 text-gray-400">
+                        <li>Event creation and management</li>
+                        <li>Attendee registration system</li>
+                        <li>Venue and resource management</li>
+                        <li>Comprehensive reporting and analytics</li>
+                    </ul>
+                    <h4 class="text-neon-cyan font-bold text-sm uppercase">Tech Stack</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">SQL</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">Database Design</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">ER Diagram</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs border border-gray-600">Queries</span>
+                    </div>
+                </div>
+                <div class="bg-[#0b0f17] px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-gray-800">
+                    <button type="button" class="inline-flex w-full justify-center rounded-md bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-300 hover:bg-gray-700 sm:w-auto" onclick="closeModal('modal-event')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-6 bg-dark-bg border-t border-gray-800 text-center">
+        <p class="text-gray-600 text-sm">© <script>document.write(new Date().getFullYear())</script> Hamika Akter Rupa.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
